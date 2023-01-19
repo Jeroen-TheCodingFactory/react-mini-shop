@@ -33,4 +33,8 @@ body {
     #root{
         padding:1rem;
     }
+
+    body{
+        font-size:1.6rem;
+    }
 }
