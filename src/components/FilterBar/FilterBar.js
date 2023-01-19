@@ -1,23 +1,62 @@
+import { useState, useEffect } from "react";
 import "./FilterBar.css";
 
-const FilterBar = () => {
+const FilterBar = ({ onFilter }) => {
 
+    const [labels, setLabels] = useState([]);
+
+    useEffect(() => {
+        let toBeRenderedLabels = [
+            {
+                name: "whiskey",
+                checked: "unchecked",
+            },
+            {
+                name: "wine",
+                checked: "unchecked",
+            },
+            {
+                name: "pizza",
+                checked: "unchecked",
+            },
+        ]
+
+        setLabels(toBeRenderedLabels);
+    }, [])
+
+    const toBeRenderedLabels = labels.map(label => {
+        let input = <input onChange={() => filterItem(label.name)} type="checkbox" name="" id={label.name} className="filterBar__checkbox" />
+
+        if(label.checked === "checked"){
+            input =  <input checked onChange={() => filterItem(label.name)} type="checkbox" name="" id={label.name} className="filterBar__checkbox" />
+        }
+        return (
+            <div key={label.name} className="filterBarInputWrapper">
+                {input}
+                <label htmlFor={label.name}>{label.name}</label>
+                
+            </div>);
+    });
+
+    const filterItem = (filter) => {
+        const copy = [...labels];
+        const newState = copy.map(label =>{
+            if(label.name !== filter){
+                label.checked = "unchecked";
+            }
+            if(label.name === filter){
+                label.checked = "checked";
+            }
+            return label;
+        });
+        setLabels(newState);
+        onFilter(filter);
+    }
 
     return (
-        <section class="filterBar">
+        <section className="filterBar">
             <div className="filterBarWrapper">
-                <div className="filterBarInputWrapper">
-                    <input type="checkbox" name="" id="whiskey" className="filterBar__checkbox" />
-                    <label htmlFor="whiskey">Whiskey</label>
-                </div>
-                <div className="filterBarInputWrapper">
-                    <input type="checkbox" name="" id="wine" className="filterBar__checkbox" />
-                    <label htmlFor="wine">Wine</label>
-                </div>
-                <div className="filterBarInputWrapper">
-                    <input type="checkbox" name="" id="pizza" className="filterBar__checkbox" />
-                    <label htmlFor="pizza">Pizza</label>
-                </div>
+                {toBeRenderedLabels}
             </div>
 
         </section>

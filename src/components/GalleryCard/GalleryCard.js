@@ -3,8 +3,8 @@ import getToBerenderedFigures from "./helpers/galleryCardHelper";
 
 const GalleryCard = (props) => {
     return (
-        <article class="galleryCard">
-            {getToBerenderedFigures(props.drinks)}
+        <article className="galleryCard">
+            {getToBerenderedFigures(props.items)}
         </article>
     );
 }

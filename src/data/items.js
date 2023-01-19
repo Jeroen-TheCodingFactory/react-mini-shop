@@ -1,29 +1,29 @@
-import whiskey__1 from "../img/jpg/whiskey/pexels-castorly-stock-3693309.jpg";
-import whiskey__2 from "../img/jpg/whiskey/pexels-ivan-3089663.jpg";
-import whiskey__3 from "../img/jpg/whiskey/pexels-med-yassin-ghaoui-2529468.jpg";
-import whiskey__4 from "../img/jpg/whiskey/pexels-mwabonje-1694853.jpg";
-import whiskey__5 from "../img/jpg/whiskey/pexels-pixabay-301692.jpg";
-import whiskey__6 from "../img/jpg/whiskey/pexels-pixabay-372959.jpg";
-import whiskey__7 from "../img/jpg/whiskey/pexels-prem-pal-singh-tanwar-602750.jpg";
+import whiskey__1 from "../img/webp/whiskey/pexels-castorly-stock-3693309.webp";
+import whiskey__2 from "../img/webp/whiskey/pexels-ivan-3089663.webp";
+import whiskey__3 from "../img/webp/whiskey/pexels-med-yassin-ghaoui-2529468.webp";
+import whiskey__4 from "../img/webp/whiskey/pexels-mwabonje-1694853.webp";
+import whiskey__5 from "../img/webp/whiskey/pexels-pixabay-301692.webp";
+import whiskey__6 from "../img/webp/whiskey/pexels-pixabay-372959.webp";
+import whiskey__7 from "../img/webp/whiskey/pexels-prem-pal-singh-tanwar-602750.webp";
 
-import wine__1 from "../img/jpg/wine/pexels-adonyi-gábor-1407846.jpg";
-import wine__2 from "../img/jpg/wine/pexels-brett-jordan-2308939.jpg";
-import wine__3 from "../img/jpg/wine/pexels-posawee-suwannaphati-391213.jpg";
-import wine__4 from "../img/jpg/wine/pexels-sabel-blanco-1835743.jpg";
-import wine__5 from "../img/jpg/wine/pexels-kenneth-2912108.jpg";
-import wine__6 from "../img/jpg/wine/pexels-maria-pop-342971.jpg";
-import wine__7 from "../img/jpg/wine/pexels-markus-spiske-121191.jpg";
+import wine__1 from "../img/webp/wine/pexels-adonyi-gábor-1407846.webp";
+import wine__2 from "../img/webp/wine/pexels-brett-jordan-2308939.webp";
+import wine__3 from "../img/webp/wine/pexels-posawee-suwannaphati-391213.webp";
+import wine__4 from "../img/webp/wine/pexels-sabel-blanco-1835743.webp";
+import wine__5 from "../img/webp/wine/pexels-kenneth-2912108.webp";
+import wine__6 from "../img/webp/wine/pexels-maria-pop-342971.webp";
+import wine__7 from "../img/webp/wine/pexels-markus-spiske-121191.webp";
 
-import pizza__1 from "../img/jpg/pizza/pexels-ahmad-nawawi-2714722.jpg";
-import pizza__2 from "../img/jpg/pizza/pexels-edward-eyer-1049620.jpg";
-import pizza__3 from "../img/jpg/pizza/pexels-eneida-nieves-905847.jpg";
-import pizza__4 from "../img/jpg/pizza/pexels-kristina-paukshtite-1146760.jpg";
-import pizza__5 from "../img/jpg/pizza/pexels-muffin-creatives-1653877.jpg";
-import pizza__6 from "../img/jpg/pizza/pexels-pablo-macedo-845798.jpg";
-import pizza__7 from "../img/jpg/pizza/pexels-vincent-rivaud-2147491.jpg";
+import pizza__1 from "../img/webp/pizza/pexels-ahmad-nawawi-2714722.webp";
+import pizza__2 from "../img/webp/pizza/pexels-edward-eyer-1049620.webp";
+import pizza__3 from "../img/webp/pizza/pexels-eneida-nieves-905847.webp";
+import pizza__4 from "../img/webp/pizza/pexels-kristina-paukshtite-1146760.webp";
+import pizza__5 from "../img/webp/pizza/pexels-muffin-creatives-1653877.webp";
+import pizza__6 from "../img/webp/pizza/pexels-pablo-macedo-845798.webp";
+import pizza__7 from "../img/webp/pizza/pexels-vincent-rivaud-2147491.webp";
 
-const items = {
-    whiskey: [
+const items = [
+     [  
         {
             name: "Default Whiskey 1",
             description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nisi sunt laudantium cumque velit, commodi necessitatibus deleniti quis vero tempore possimus quam ipsa voluptate cum eos provident at magni.",
@@ -67,7 +67,7 @@ const items = {
             alt: "Default alt, must change!"
         },
     ],
-    wine: [
+    [
         {
             name: "Default Wine #1",
             description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nisi sunt laudantium cumque velit, commodi necessitatibus deleniti quis vero tempore possimus quam ipsa voluptate cum eos provident at magni.",
@@ -112,7 +112,7 @@ const items = {
         },
 
     ],
-    pizza: [
+    [
         {
             name: "Default Pizza #1",
             description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nisi sunt laudantium cumque velit, commodi necessitatibus deleniti quis vero tempore possimus quam ipsa voluptate cum eos provident at magni.",
@@ -155,7 +155,8 @@ const items = {
             image: pizza__7,
             alt:"",
         },
-    ]
-}
+    ],
+    
+]
 
 export default items;
