@@ -3,7 +3,6 @@ let iterator = 1;
 let classToBeAdded = "";
 function getToBerenderedFigures(drinks) {
    let drinksToBeRendered = drinks.map(drink => {
-    console.log(iterator);
         switch (iterator) {
             case 1:
                 classToBeAdded = "galleryCard__figure galleryCard__figure--big";
@@ -21,8 +20,8 @@ function getToBerenderedFigures(drinks) {
         iterator += 1;
 
         return (
-            <figure className={classToBeAdded}>
-                <img class="galleryCard__img" src={drink.image} alt={drink.alt} />
+            <figure key={drink.image} className={classToBeAdded}>
+                <img className="galleryCard__img" src={drink.image} alt={drink.alt} />
             </figure>
         );
     });

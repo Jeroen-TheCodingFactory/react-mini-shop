@@ -1,16 +1,22 @@
-import FilterBar from "../components/FilterBar/FilterBar";
-import GalleryCard from "../components/GalleryCard/GalleryCard";
-import items from "../data/items";
+import { useState } from "react";
+import {Routes, Route} from "react-router-dom";
+import Homepage from "../pages/Homepage";
+import Productpage from "../pages/Productpage";
+
 import "./App.css";
 const App = () => {
+  const [collectionForProductPage, setCollectionFromProductPage] = useState([]);
 
+  const onGalleryCardClicked = (collection) => {
+    setCollectionFromProductPage(collection);
+  }
 
   return (
     <>
-      <FilterBar></FilterBar>
-      <GalleryCard drinks={items.whiskey}/>
-      <GalleryCard drinks={items.wine}/>
-      <GalleryCard drinks={items.pizza}/>
+      <Routes>
+        <Route path="/" element={<Homepage onGalleryCardClicked={onGalleryCardClicked} />} />
+        <Route path="/product/:type" element={<Productpage collection={collectionForProductPage} />} />
+      </Routes>
     </>
   );
 }
